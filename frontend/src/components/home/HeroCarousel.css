@@ -1,0 +1,243 @@
+/* ================================
+   Hero Carousel Styles - UPDATED
+   ================================ */
+
+.hero-carousel-wrapper {
+  margin-top: 80px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Individual Slide */
+.hero-slide {
+  position: relative;
+  height: 600px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .hero-slide {
+    height: 500px;
+  }
+}
+
+/* Background Image - FIXED ZOOM */
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain;        /* ← Changed from 'cover' to 'contain' */
+  background-position: right center; /* ← Position image to the right */
+  background-repeat: no-repeat;
+  background-color: #000;
+}
+
+/* Dark Overlay - ADJUSTED FOR BETTER TEXT */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.9) 0%,      /* ← Darker on left for text */
+    rgba(0, 0, 0, 0.7) 40%,     /* ← Gradual fade */
+    rgba(0, 0, 0, 0.3) 70%,     /* ← Lighter in middle */
+    rgba(0, 0, 0, 0.1) 100%     /* ← Almost transparent on right for product visibility */
+  );
+}
+
+/* Content Container */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 4rem;
+  display: flex;
+  justify-content: flex-start; /* Pushes the text block to the left */
+  align-items: center;
+}
+
+/* Text Content - BETTER POSITIONING */
+.hero-text {
+  max-width: 600px;
+  color: white;
+  text-align: left;           /* Forces the actual lines of text to the left */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;    /* Ensures buttons and text start at the same line */
+  margin-right: auto;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  text-align: left;           /* Extra insurance for alignment */
+}
+
+.hero-headline {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  text-align: left;           /* Ensures headline isn't centered */
+}
+
+@media (max-width: 768px) {
+  .hero-headline {
+    font-size: 2.5rem;
+  }
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: 500px;
+  text-align: left;           /* Ensures description isn't centered */
+}
+
+@media (max-width: 768px) {
+  .hero-description {
+    font-size: 1rem;
+  }
+}
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start; /* Keeps the Buy/Learn buttons on the left */
+}
+
+.btn-hero-primary,
+.btn-hero-secondary {
+  padding: 15px 40px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-hero-primary {
+  background: white;
+  color: black;
+  border: 2px solid white;
+}
+
+.btn-hero-primary:hover {
+  background: transparent;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+}
+
+.btn-hero-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-hero-secondary:hover {
+  background: white;
+  color: black;
+  transform: translateY(-2px);
+}
+
+/* Carousel Controls (Arrows) */
+.hero-carousel-wrapper .carousel-control-prev,
+.hero-carousel-wrapper .carousel-control-next {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.hero-carousel-wrapper .carousel-control-prev {
+  left: 2rem;
+}
+
+.hero-carousel-wrapper .carousel-control-next {
+  right: 2rem;
+}
+
+.hero-carousel-wrapper .carousel-control-prev:hover,
+.hero-carousel-wrapper .carousel-control-next:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Carousel Indicators (Dots) */
+.hero-carousel-wrapper .carousel-indicators {
+  bottom: 2rem;
+}
+
+.hero-carousel-wrapper .carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+}
+
+.hero-carousel-wrapper .carousel-indicators button.active {
+  background: white;
+  width: 40px;
+  border-radius: 6px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 0 1.5rem;
+  }
+  
+  .hero-text {
+    padding-left: 0;
+  }
+  
+  .hero-background {
+    background-position: center center; /* ← Center on mobile */
+    background-size: cover;             /* ← Cover on mobile */
+  }
+  
+  .hero-overlay {
+    background: rgba(0, 0, 0, 0.6);     /* ← Simpler overlay on mobile */
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+  }
+  
+  .btn-hero-primary,
+  .btn-hero-secondary {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .hero-carousel-wrapper .carousel-control-prev {
+    left: 1rem;
+  }
+  
+  .hero-carousel-wrapper .carousel-control-next {
+    right: 1rem;
+  }
+}

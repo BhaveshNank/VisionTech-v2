@@ -1,0 +1,272 @@
+/* ================================
+   ORIGINAL VISIONTECH FOOTER STYLES
+   Perfect Alignment Version
+   ================================ */
+
+.footer {
+  background-color: #000000 !important;
+  color: #e2e8f0 !important;
+  padding: 3rem 1.5rem 1.5rem !important;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ================================
+   Column Alignment - CRITICAL
+   ================================ */
+
+.footer-col {
+  margin-bottom: 2rem;
+  min-width: 200px;
+  text-align: left !important; /* Force left alignment */
+}
+
+.footer-brand,
+.footer-section {
+  text-align: left !important; /* All sections left-aligned */
+}
+
+/* ================================
+   Footer Titles - ALIGNED
+   ================================ */
+
+.footer-logo,
+.footer-heading {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem !important;
+  color: white !important;
+  text-align: left !important;
+}
+
+.footer-logo {
+  font-size: 1.75rem;
+}
+
+/* Blue underline - PERFECT alignment */
+.footer-logo-underline,
+.footer-heading-underline {
+  width: 40px;
+  height: 2px;
+  background-color: #3498db;
+  margin: 0 0 1.2rem 0 !important; /* No top/left/right margin */
+}
+
+/* ================================
+   Footer Text - LEFT ALIGNED
+   ================================ */
+
+.footer-description {
+  line-height: 1.6;
+  color: #a0aec0 !important;
+  margin-bottom: 1rem;
+  text-align: left !important; /* Critical - was centered */
+}
+
+.footer-creator {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #a0aec0 !important;
+  margin-bottom: 1.5rem;
+  text-align: left !important;
+}
+
+/* ================================
+   Social Icons - LEFT ALIGNED
+   ================================ */
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  justify-content: flex-start !important; /* Left align */
+}
+
+.social-icon {
+  color: #cbd5e0 !important;
+  font-size: 1.2rem !important;
+  transition: color 0.2s ease, transform 0.2s ease;
+  text-decoration: none !important;
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.social-icon:hover {
+  color: #3498db !important;
+  transform: translateY(-2px);
+}
+
+/* ================================
+   Footer Links - LEFT ALIGNED
+   ================================ */
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left !important;
+}
+
+.footer-links li {
+  margin-bottom: 0.7rem;
+  text-align: left !important;
+}
+
+.footer-links a {
+  display: block;
+  color: #cbd5e0 !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease;
+  text-align: left !important;
+}
+
+.footer-links a:hover {
+  color: #3498db !important;
+}
+
+/* ================================
+   Newsletter Section - LEFT ALIGNED
+   ================================ */
+
+.newsletter-description {
+  line-height: 1.6;
+  color: #a0aec0 !important;
+  margin-bottom: 1rem;
+  text-align: left !important;
+}
+
+.newsletter-form {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.newsletter-group {
+  display: flex;
+  margin-bottom: 0;
+  gap: 0;
+}
+
+.newsletter-input {
+  padding: 0.7rem 1rem !important;
+  border: none !important;
+  border-radius: 4px 0 0 4px !important;
+  background-color: #1a1a1a !important;
+  color: white !important;
+  flex-grow: 1;
+}
+
+.newsletter-input:focus {
+  outline: none !important;
+  background-color: #2a2a2a !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+.newsletter-input::placeholder {
+  color: #a0aec0 !important;
+}
+
+.newsletter-button {
+  background-color: #3498db !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 0 4px 4px 0 !important;
+  padding: 0 1.2rem !important;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.newsletter-button:hover {
+  background-color: #2980b9 !important;
+}
+
+/* ================================
+   Footer Bottom Section
+   ================================ */
+
+.footer-bottom {
+  border-top: 1px solid #333333;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.footer-copyright {
+  color: #a0aec0 !important;
+  margin: 0;
+  text-align: left !important;
+}
+
+.footer-legal-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-end !important; /* Right side */
+}
+
+.footer-legal-links a {
+  color: #a0aec0 !important;
+  text-decoration: none !important;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.footer-legal-links a:hover {
+  color: #3498db !important;
+}
+
+.footer-legal-links .separator {
+  display: none;
+}
+
+/* ================================
+   Responsive
+   ================================ */
+
+@media (max-width: 768px) {
+  .footer-col {
+    text-align: center !important;
+  }
+  
+  .footer-brand,
+  .footer-section {
+    text-align: center !important;
+  }
+  
+  .footer-description,
+  .footer-creator,
+  .newsletter-description {
+    text-align: center !important;
+  }
+  
+  .footer-logo-underline,
+  .footer-heading-underline {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .social-icons {
+    justify-content: center !important;
+  }
+  
+  .footer-links {
+    text-align: center !important;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+  }
+  
+  .footer-copyright {
+    text-align: center !important;
+  }
+  
+  .footer-legal-links {
+    justify-content: center !important;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,325 @@
+/* ================================
+   Gaming Section
+   ================================ */
+
+.gaming-section {
+  margin: 0;
+  padding: 0;
+}
+
+/* ================================
+   Gaming Hero Banner
+   ================================ */
+
+.gaming-hero {
+  position: relative;
+  background: #000000;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px 100px 20px;
+  overflow: hidden;
+}
+
+/* Hero Content */
+.gaming-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.gaming-hero-title {
+  font-size: 5rem;
+  font-weight: 900;
+  color: white;
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: 2px;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #a855f7 0%, #3b82f6 50%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gaming-hero-subtitle {
+  font-size: 1.2rem;
+  color: #e5e7eb;
+  font-weight: 500;
+  letter-spacing: 4px;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+/* Hero Image */
+.gaming-hero-image {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.hero-laptops-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 60px rgba(168, 85, 247, 0.4));
+}
+
+/* Hero Buttons */
+.gaming-hero-buttons {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.btn-gaming-primary,
+.btn-gaming-secondary {
+  padding: 15px 40px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+}
+
+.btn-gaming-primary {
+  background: white;
+  color: #000;
+  border: 2px solid white;
+}
+
+.btn-gaming-primary:hover {
+  background: transparent;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+}
+
+.btn-gaming-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-gaming-secondary:hover {
+  background: white;
+  color: #000;
+  transform: translateY(-3px);
+}
+
+/* ================================
+   Gaming Products Grid
+   ================================ */
+
+.gaming-products-container {
+  padding: 0;
+  margin: 0;
+}
+
+.gaming-product-card {
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 80px;
+  overflow: hidden;
+}
+
+/* Card Colors */
+.card-purple {
+  background: linear-gradient(135deg, #1e1b4b 0%, #4c1d95 100%);
+}
+
+.card-blue {
+  background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+}
+
+/* Card Content */
+.gaming-card-content {
+  position: relative;
+  z-index: 2;
+  max-width: 500px;
+  color: white;
+}
+
+.gaming-card-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.gaming-card-description {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+/* Card Buttons */
+.gaming-card-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-card-primary,
+.btn-card-secondary {
+  padding: 12px 35px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.btn-card-primary {
+  background: white;
+  color: #000;
+  border: 2px solid white;
+}
+
+.btn-card-primary:hover {
+  background: transparent;
+  color: white;
+  transform: translateY(-3px);
+}
+
+.btn-card-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-card-secondary:hover {
+  background: white;
+  color: #000;
+  transform: translateY(-3px);
+}
+
+/* Card Image */
+.gaming-card-image {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  width: 50%;
+  background: transparent;
+}
+
+.gaming-card-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
+  transition: transform 0.4s ease;
+  background: transparent; 
+  mix-blend-mode: lighten;
+}
+
+.gaming-product-card:hover .gaming-card-image img {
+  transform: scale(1.05);
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+   ================================ */
+
+@media (max-width: 991px) {
+  .gaming-hero-title {
+    font-size: 3.5rem;
+  }
+  
+  .gaming-product-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 40px;
+    min-height: 600px;
+  }
+  
+  .gaming-card-content {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+  
+  .gaming-card-title {
+    font-size: 2.5rem;
+  }
+  
+  .gaming-card-buttons {
+    justify-content: center;
+  }
+  
+  .gaming-card-image {
+    width: 80%;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gaming-hero {
+    min-height: 500px;
+    padding: 60px 20px 80px 20px;
+  }
+  
+  .gaming-hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .gaming-hero-subtitle {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+  }
+  
+  .gaming-hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .btn-gaming-primary,
+  .btn-gaming-secondary {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .gaming-product-card {
+    min-height: 500px;
+    padding: 40px 25px;
+  }
+  
+  .gaming-card-title {
+    font-size: 2rem;
+  }
+  
+  .gaming-card-description {
+    font-size: 1rem;
+  }
+  
+  .gaming-card-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .btn-card-primary,
+  .btn-card-secondary {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .gaming-card-image {
+    width: 100%;
+  }
+  
+}

@@ -1,0 +1,102 @@
+/* ================================
+   VisionTech Products Page Layout
+   ================================ */
+
+.products-page-wrapper {
+  background: #f8f9fa;
+  min-height: 100vh;
+  padding-top: 100px;  /* ← Increase from 50px to 120px */
+  padding-bottom: 50px;
+}
+
+/* Sidebar Leveling */
+.filters-sidebar-sticky {
+  position: sticky;
+  top: 100px; /* Offset for scroll */
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  border: 1px solid #edf2f7;
+  /* CRITICAL: No top margin */
+  margin-top: 0 !important; 
+}
+
+/* Header Alignment Fix */
+.products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Keeps the title at the very top edge */
+  padding-bottom: 25px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #e2e8f0;
+  /* CRITICAL: Force the header to the top of the column */
+  margin-top: 0 !important; 
+}
+
+.products-title {
+  font-size: 2.2rem; /* Made larger for clear visibility */
+  font-weight: 800;
+  color: #1a202c;
+  margin: 0 !important;
+  line-height: 1; /* Prevents text from drifting down */
+}
+
+.products-subtitle {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #a0aec0;
+  letter-spacing: 1.5px;
+  margin-top: 8px !important;
+}
+
+/* Controls */
+.sort-select {
+  width: 200px !important;
+  height: 42px !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 8px !important;
+  font-size: 0.9rem !important;
+  /* Aligns select box with the top of the title */
+  margin-top: 0 !important; 
+}
+
+/* Sidebar Components */
+.filter-heading {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  color: #2d3748;
+  margin-bottom: 20px;
+}
+
+.category-item {
+  border: none !important;
+  margin-bottom: 5px;
+  padding: 12px 15px !important;
+  border-radius: 10px !important;
+  font-size: 0.95rem;
+  color: #4a5568 !important;
+}
+
+.category-item.active {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+.btn-apply-filter {
+  width: 100%;
+  background: #1a202c;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-apply-filter:hover {
+  background: #000;
+  transform: translateY(-2px);
+}
