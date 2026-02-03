@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { Container, Row, Col, Spinner, Alert } from 'react-bootstrap';
-import { FaShoppingCart, FaArrowLeft, FaCheck, FaCheckCircle, FaMinus, FaPlus } from 'react-icons/fa';
+import { FaShoppingCart, FaArrowLeft, FaCheck, FaMinus, FaPlus } from 'react-icons/fa';
 import { useCart } from '../context/CartContext';
 import { getProductById } from '../services/api';
 import './ProductDetailPage.css';
