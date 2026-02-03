@@ -173,7 +173,9 @@ function Chatbot() {
                             </button>
 
                             <div className="chat-profile-picture">
-                                <div className="profile-avatar">M</div>
+                                <div className="profile-avatar">
+                                    <img src="/images/chatbot/visiontech-logo.png" />
+                                </div>
                                 <div className="online-indicator"></div>
                             </div>
 

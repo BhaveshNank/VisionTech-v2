@@ -65,7 +65,10 @@ def create_app(config_name=None):
     # Allows React frontend to communicate with Flask backend
     CORS(app, resources={
         r"/api/*": {
-            "origins": "*",  # In production, specify exact origins
+            "origins": [
+            "https://visiontech.vercel.app",
+            "http://localhost:3000"  # Keep for local development
+        ], 
             "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
             "allow_headers": ["Content-Type", "Authorization"]
         }

@@ -10,7 +10,7 @@ function ProductDetailPage() {
   const { id } = useParams();
   const navigate = useNavigate();
   const { addToCart, cartItems } = useCart();
-  
+
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -24,7 +24,7 @@ function ProductDetailPage() {
       try {
         setLoading(true);
         const response = await getProductById(id);
-        
+
         if (response.success) {
           setProduct(response.data);
         } else {
@@ -115,9 +115,6 @@ function ProductDetailPage() {
                   alt={product.name}
                   onError={(e) => e.target.src = '/images/placeholder-product.png'}
                 />
-                {product.stock === 0 && (
-                  <div className="out-of-stock-overlay">Out of Stock</div>
-                )}
               </div>
             </div>
           </Col>
@@ -126,39 +123,29 @@ function ProductDetailPage() {
           <Col lg={6} md={6}>
             <div className="product-info-section">
               <div className="product-category-badge">{product.category}</div>
-              
+
               <h1 className="product-detail-name">{product.name}</h1>
-              
+
               {product.brand && <p className="product-brand">by {product.brand}</p>}
-              
+
               <div className="product-detail-price">{formatPrice(product.price)}</div>
 
-              <div className="stock-status">
-                {product.stock > 0 ? (
-                  <>
-                    <FaCheckCircle className="stock-icon in-stock" />
-                    <span className="in-stock-text">In Stock</span>
-                  </>
-                ) : (
-                  <span className="out-of-stock-text">Out of Stock</span>
-                )}
-              </div>
 
               {/* Quantity Selector */}
-              {product.stock > 0 && !isInCart && (
+              {!isInCart && (
                 <div className="quantity-selector">
                   <label className="quantity-label">Quantity</label>
                   <div className="quantity-controls">
-                    <button 
-                      className="quantity-btn" 
+                    <button
+                      className="quantity-btn"
                       onClick={decrementQuantity}
                       disabled={quantity <= 1}
                     >
                       <FaMinus />
                     </button>
                     <div className="quantity-display">{quantity}</div>
-                    <button 
-                      className="quantity-btn" 
+                    <button
+                      className="quantity-btn"
                       onClick={incrementQuantity}
                     >
                       <FaPlus />
@@ -172,7 +159,7 @@ function ProductDetailPage() {
                 <button
                   className="add-to-cart-btn"
                   onClick={handleAddToCart}
-                  disabled={product.stock === 0 || isInCart}
+                  disabled={isInCart}
                 >
                   {isInCart ? (
                     <>
