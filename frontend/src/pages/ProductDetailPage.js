@@ -14,7 +14,6 @@ function ProductDetailPage() {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [quantity, setQuantity] = useState(1);
 
   // Check if product is in cart
   const isInCart = product && cartItems.some(item => item._id === product._id);
@@ -43,19 +42,7 @@ function ProductDetailPage() {
 
   const handleAddToCart = () => {
     if (product) {
-      for (let i = 0; i < quantity; i++) {
-        addToCart(product);
-      }
-    }
-  };
-
-  const incrementQuantity = () => {
-    setQuantity(prev => prev + 1);
-  };
-
-  const decrementQuantity = () => {
-    if (quantity > 1) {
-      setQuantity(prev => prev - 1);
+      addToCart(product);
     }
   };
 
@@ -131,28 +118,6 @@ function ProductDetailPage() {
               <div className="product-detail-price">{formatPrice(product.price)}</div>
 
 
-              {/* Quantity Selector */}
-              {!isInCart && (
-                <div className="quantity-selector">
-                  <label className="quantity-label">Quantity</label>
-                  <div className="quantity-controls">
-                    <button
-                      className="quantity-btn"
-                      onClick={decrementQuantity}
-                      disabled={quantity <= 1}
-                    >
-                      <FaMinus />
-                    </button>
-                    <div className="quantity-display">{quantity}</div>
-                    <button
-                      className="quantity-btn"
-                      onClick={incrementQuantity}
-                    >
-                      <FaPlus />
-                    </button>
-                  </div>
-                </div>
-              )}
 
               {/* Buttons */}
               <div className="product-actions">
