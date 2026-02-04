@@ -66,7 +66,8 @@ def create_app(config_name=None):
     CORS(app, resources={
         r"/api/*": {
             "origins": [
-            "https://vision-tech-v2-8ovwpc5wq-bhavesh-nankanis-projects.vercel.app",
+            "https://vision-tech-v2.vercel.app",
+            "https://*.vercel.app", # All Vercel preview URLs
             "http://localhost:3000"  # Keep for local development
         ], 
             "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
