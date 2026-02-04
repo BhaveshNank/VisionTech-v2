@@ -66,11 +66,12 @@ def create_app(config_name=None):
     CORS(app, resources={
         r"/api/*": {
             "origins": [
-            "https://visiontech.vercel.app",
+            "https://vision-tech-v2-8ovwpc5wq-bhavesh-nankanis-projects.vercel.app",
             "http://localhost:3000"  # Keep for local development
         ], 
             "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-            "allow_headers": ["Content-Type", "Authorization"]
+            "allow_headers": ["Content-Type", "Authorization"],
+            "supports_credentials": True
         }
     })
     
