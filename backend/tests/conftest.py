@@ -5,7 +5,12 @@ import pytest
 import sys
 import os
 
-# Add parent directory to path
+# ✅ Set environment variables BEFORE importing app
+# This ensures create_app() reads the correct MongoDB URI
+os.environ.setdefault('MONGODB_URI', os.environ.get('MONGODB_URI', ''))
+os.environ.setdefault('GEMINI_API_KEY', os.environ.get('GEMINI_API_KEY', ''))
+os.environ.setdefault('FLASK_ENV', 'testing')
+
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from app import create_app
