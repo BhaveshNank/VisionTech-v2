@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { Container, Row, Col, Button } from 'react-bootstrap';
 import { getAllProducts } from '../services/api';
 import ProductCard from '../components/product/ProductCard';
-import HeroCarousel from '../components/home/HeroCarousel'; // ← Import
+import HeroCarousel from '../components/home/HeroCarousel';
 import FeaturedProducts from '../components/home/FeaturedProducts';
 import DealsSection from '../components/home/DealsSection';
 import ExperienceSection from '../components/home/ExperienceSection';

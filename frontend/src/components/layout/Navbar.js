@@ -2,13 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar as BootstrapNavbar, Nav, Container } from 'react-bootstrap';
 import { FaShoppingCart } from 'react-icons/fa';
-import { useCart } from '../../context/CartContext'; // ← ADD THIS
+import { useCart } from '../../context/CartContext'; 
 import SearchAutocomplete from '../common/SearchAutocomplete';
 import './Navbar.css';
 
 function Navbar() {
-  const { getCartItemsCount } = useCart(); // ← ADD THIS
-  const cartItemCount = getCartItemsCount(); // ← UPDATED: Now uses actual cart
+  const { getCartItemsCount } = useCart(); 
+  const cartItemCount = getCartItemsCount();
 
   return (
     <BootstrapNavbar 
@@ -41,7 +41,6 @@ function Navbar() {
             <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
           </Nav>
           
-          {/* ✅ UPDATED: Search with Autocomplete */}
           <SearchAutocomplete />
           
           {/* Cart Button */}

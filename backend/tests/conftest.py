@@ -6,7 +6,6 @@ import sys
 import os
 from dotenv import load_dotenv
 
-# ✅ Load .env file FIRST before anything else
 # This handles local development
 # In CI, GitHub secrets override these values
 load_dotenv(os.path.join(os.path.dirname(__file__), '..', '.env'))

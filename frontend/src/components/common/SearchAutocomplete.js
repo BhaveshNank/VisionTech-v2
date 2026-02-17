@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { Form, FormControl, Button, ListGroup } from 'react-bootstrap';
 import { FaSearch } from 'react-icons/fa';
 import { getAllProducts } from '../../services/api';
-// ❌ REMOVED: import './SearchAutocomplete.css';
 
 function SearchAutocomplete() {
   const navigate = useNavigate();

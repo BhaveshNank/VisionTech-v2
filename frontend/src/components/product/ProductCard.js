@@ -2,13 +2,13 @@ import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FaShoppingCart, FaCheck } from 'react-icons/fa';
-import { useCart } from '../../context/CartContext'; // ← ONLY ADD THIS
+import { useCart } from '../../context/CartContext';
 import './ProductCard.css';
 
 function ProductCard({ product, compact = false }) {
-  const { addToCart, cartItems } = useCart(); // ← ONLY ADD THIS
+  const { addToCart, cartItems } = useCart();
 
-  // Check if item is in cart - ONLY ADD THIS
+  // Check if item is in cart
   const isInCart = cartItems.some(item => item._id === product._id);
 
   // Format price
@@ -70,7 +70,7 @@ function ProductCard({ product, compact = false }) {
     );
   }
 
-  // Handle add to cart - ONLY ADD THIS
+  // Handle add to cart 
   const handleAddToCart = () => {
     addToCart(product);
   };
@@ -142,10 +142,10 @@ function ProductCard({ product, compact = false }) {
           <Button
             variant="outline-primary"
             className="add-to-cart-button"
-            onClick={handleAddToCart}  // ← ONLY CHANGE: Added onClick
+            onClick={handleAddToCart} 
             disabled={product.stock === 0}
           >
-            {isInCart ? (  // ← ONLY CHANGE: Dynamic button text
+            {isInCart ? (
               <>
                 <FaCheck className="cart-icon" />
                 In Cart

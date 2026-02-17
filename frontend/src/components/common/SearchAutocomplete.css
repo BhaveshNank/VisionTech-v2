@@ -76,7 +76,6 @@
   }
 }
 
-/* ✅ UPDATED: Suggestion Item - Proper Left Alignment */
 .suggestion-item {
   border: none;
   padding: 12px 16px; /* ← Added horizontal padding */
@@ -89,7 +88,7 @@
   background-color: #f8f9fa;
 }
 
-/* ✅ UPDATED: Suggestion Content - Force Left Alignment */
+
 .suggestion-content {
   display: flex;
   align-items: center;
@@ -107,7 +106,7 @@
   flex-shrink: 0; /* ← Prevents image from shrinking */
 }
 
-/* ✅ UPDATED: Suggestion Text - Left Aligned */
+
 .suggestion-text {
   flex: 1;
   min-width: 0;
@@ -124,7 +123,7 @@
   text-overflow: ellipsis;
 }
 
-/* ✅ SIMPLIFIED: Category only (no price, no meta wrapper) */
+
 .suggestion-category {
   font-size: 0.8rem;
   color: #666;
@@ -133,7 +132,7 @@
   text-align: left; /* ← Left aligned */
 }
 
-/* View All Results Item */
+
 .view-all-item {
   border: none;
   border-top: 1px solid #e0e0e0;
@@ -153,7 +152,7 @@
   color: white;
 }
 
-/* No Results */
+
 .no-results {
   padding: 24px;
   text-align: center;
@@ -165,7 +164,7 @@
   font-size: 0.9rem;
 }
 
-/* Scrollbar Styles */
+
 .suggestions-dropdown::-webkit-scrollbar {
   width: 6px;
 }

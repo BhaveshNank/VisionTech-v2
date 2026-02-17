@@ -5,7 +5,7 @@
 .products-page-wrapper {
   background: #f8f9fa;
   min-height: 100vh;
-  padding-top: 100px;  /* ← Increase from 50px to 120px */
+  padding-top: 100px; 
   padding-bottom: 50px;
 }
 

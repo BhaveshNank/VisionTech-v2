@@ -5,7 +5,6 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import './FeaturedProducts.css';
 
 function FeaturedProducts() {
-  // Featured products data - EASY TO UPDATE!
   const featuredProducts = [
     {
       id: 1,
@@ -65,7 +64,7 @@ function FeaturedProducts() {
   const scroll = (direction) => {
     const container = scrollContainer.current;
     if (container) {
-      const scrollAmount = 350; // Width of one card + gap
+      const scrollAmount = 350; 
       if (direction === 'left') {
         container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
       } else {

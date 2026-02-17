@@ -4,26 +4,25 @@ import { FaStar } from 'react-icons/fa';
 import './TestimonialsSection.css';
 
 function TestimonialsSection() {
-  // Testimonials data - EASY TO UPDATE!
   const testimonials = [
     {
       id: 1,
       name: 'Sarah Johnson',
-      image: '/images/testimonials/testimonial1.jpg', // ← PLACEHOLDER: Replace with actual image
+      image: '/images/testimonials/testimonial1.jpg',
       rating: 5,
       text: 'The AI recommendations were spot on! Found the perfect laptop for my needs within minutes.',
     },
     {
       id: 2,
       name: 'Michael Chen',
-      image: '/images/testimonials/testimonial2.jpg', // ← PLACEHOLDER: Replace with actual image
+      image: '/images/testimonials/testimonial2.jpg',
       rating: 5,
       text: 'Excellent customer service and fast delivery. My go-to store for all electronics.',
     },
     {
       id: 3,
       name: 'Emily Davis',
-      image: '/images/testimonials/testimonial3.jpg', // ← PLACEHOLDER: Replace with actual image
+      image: '/images/testimonials/testimonial3.jpg',
       rating: 5,
       text: 'Great prices and the extended warranty gives me peace of mind. Highly recommend!',
     },

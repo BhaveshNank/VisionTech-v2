@@ -1,7 +1,7 @@
 .cart-page {
-  padding-top: 60px; /* Reduced from 100px for better visibility */
+  padding-top: 60px; 
   min-height: calc(100vh - 200px);
-  background-color: #f8f9fa; /* Light gray background to make white cards pop */
+  background-color: #f8f9fa;
 }
 
 /* Cleaner Card Design */
@@ -14,7 +14,7 @@
 
 /* Modernize Headers */
 .cart-card .card-header, .summary-card .card-header {
-  background: #ffffff !important; /* White background for a clean look */
+  background: #ffffff !important;
   color: #1a1a1a !important;
   border-bottom: 1px solid #eee;
   padding: 1.25rem 1.5rem;
@@ -56,7 +56,6 @@
   padding: 5px;
 }
 
-/* Remove Button - make it subtle */
 .btn-outline-danger {
   border: none;
   color: #dc3545;
