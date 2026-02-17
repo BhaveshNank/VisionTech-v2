@@ -68,8 +68,12 @@ jobs:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     steps:
-      - name: Trigger Render Deploy
-        run: echo "Render auto-deploys from main"
+      - name: Deploy Backend to Render
+        run: |
+          curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
+          echo "✅ Render deployment triggered"
       
-      - name: Trigger Vercel Deploy
-        run: echo "Vercel auto-deploys from main"
+      - name: Deploy Frontend to Vercel
+        run: |
+          curl -X POST ${{ secrets.VERCEL_DEPLOY_HOOK }}
+          echo "✅ Vercel deployment triggered"
