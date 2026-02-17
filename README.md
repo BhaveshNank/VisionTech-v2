@@ -1,13 +1,16 @@
 # VisionTech v2 - AI-Powered E-Commerce Platform
 
+
 A modern, full-stack e-commerce platform for electronics with integrated AI product recommendations powered by Google Gemini.
 
-**Live Demo:** [https://vision-tech-v2.vercel.app](https://vision-tech-v2.vercel.app)
+**🌐 Live Demo:** [https://vision-tech-v2.vercel.app](https://vision-tech-v2.vercel.app)  
+**📊 Backend API:** [https://visiontech-v2-backend.onrender.com/health](https://visiontech-v2-backend.onrender.com/health)
 
 ---
 
 ## 📋 Table of Contents
 
+- [Screenshots](#screenshots)
 - [Overview](#overview)
 - [Tech Stack](#tech-stack)
 - [Features](#features)
@@ -19,6 +22,26 @@ A modern, full-stack e-commerce platform for electronics with integrated AI prod
 - [API Documentation](#api-documentation)
 - [Deployment](#deployment)
 - [Environment Variables](#environment-variables)
+
+---
+
+## 📸 Screenshots
+
+### Homepage
+![Homepage Hero](docs/screenshots/homepage-hero.png)
+*Hero carousel featuring latest products*
+
+### Product Browsing
+![Products Page](docs/screenshots/products-page.png)
+*Advanced filtering and search functionality*
+
+### AI Shopping Assistant
+![Chatbot](docs/screenshots/chatbot-demo.png)
+*Gemini AI-powered product recommendations*
+
+### Shopping Cart
+![Shopping Cart](docs/screenshots/cart-page.png)
+*Persistent cart with real-time updates*
 
 ---
 
@@ -612,8 +635,10 @@ This project is for educational and portfolio purposes.
 ## 👤 Author
 
 **Bhavesh Nankani**
+- Portfolio: [vscode-portfolio-rho.vercel.app](http://vscode-portfolio-rho.vercel.app)
 - GitHub: [@BhaveshNank](https://github.com/BhaveshNank)
-- Project: [VisionTech-v2](https://github.com/BhaveshNank/VisionTech-v2)
+- Linkedin: [linkedin.com/in/bhavesh-nankani/](https://www.linkedin.com/in/bhavesh-nankani/)
+
 
 ---
 
