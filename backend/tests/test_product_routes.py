@@ -94,6 +94,7 @@ def test_get_product_stats(client):
     assert data['success'] is True
 
 
+
 def test_health_check(client):
     """Test GET /health returns healthy status"""
     response = client.get('/health')
