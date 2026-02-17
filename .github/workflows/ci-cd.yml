@@ -30,6 +30,10 @@ jobs:
         continue-on-error: true
       
       - name: Run tests
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}
+          FLASK_ENV: testing
         run: |
           cd backend
           pytest --cov=app tests/
