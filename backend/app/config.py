@@ -111,9 +111,7 @@ class TestingConfig(Config):
     
     DEBUG = True
     TESTING = True
-    
-    # Use separate test database to avoid corrupting real data
-    MONGODB_URI = 'mongodb://localhost:27017/visiontech_test_db'
+
 
 
 # Configuration dictionary
