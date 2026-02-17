@@ -4,12 +4,12 @@ Test configuration and fixtures
 import pytest
 import sys
 import os
+from dotenv import load_dotenv
 
-# ✅ Set environment variables BEFORE importing app
-# This ensures create_app() reads the correct MongoDB URI
-os.environ.setdefault('MONGODB_URI', os.environ.get('MONGODB_URI', ''))
-os.environ.setdefault('GEMINI_API_KEY', os.environ.get('GEMINI_API_KEY', ''))
-os.environ.setdefault('FLASK_ENV', 'testing')
+# ✅ Load .env file FIRST before anything else
+# This handles local development
+# In CI, GitHub secrets override these values
+load_dotenv(os.path.join(os.path.dirname(__file__), '..', '.env'))
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
